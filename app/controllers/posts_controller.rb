@@ -17,12 +17,11 @@ class PostsController < ApplicationController
     
      def create
         @post = Post.new(post_params)
+        @post.user = current_user
          
          # Post モデルを引数のパラメータで初期化(データの保存は指定ない)
         @Post = Post.new(
-            content: params[:content],
-            user_id: @current_user.id
-            )
+            content: params[:content],user_id: @current_user.id )
         
         # 保存の正否をチェック
    if @post.save
