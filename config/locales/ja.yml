@@ -1,0 +1,17 @@
+ja:
+    views:
+        pagination:
+            first: 最初
+            last: 最後
+            previous: 前
+            next: 次
+            truncate: ...
+        activerecord:
+        attributes:
+            post:
+                name: 名前
+                title: タイトル
+                content: 投稿内容
+            comment:
+                name: 名前
+                comment: コメント

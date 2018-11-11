@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header bg-info text-white">
+      <h4><%= post.title %></h4>
+      <!-- 追加 -->
+      <% post.tags.each do |tag| %>
+        <span class="badge badge-light"><%= tag.name %></span>
+      <% end %>
+  </div>
+  <div class="card-body">
+      <p class="card-text"><%= simple_format(post.content) %></p>
+  </div>
+  <div class="card-footer">
+      <p class="text-right font-weight-bold mr-10"><%= post.name %></p>
+  </div>
+</div>
+
+<!-- チュートリアルリスト13.22で追加 -->
+<li id="post-<%= post.id %>">
+  <span class="user"><%= link_to post.user.name, post.user %></span>
+  <span class="content"><%= post.content %></span>
+  <span class="timestamp">
+    投稿しました！ <%= time_ago_in_words(post.created_at) %> ago.
+  </span>
+</li>
+
+<!-- チュートリアル１３．２２で追加 --!>
+

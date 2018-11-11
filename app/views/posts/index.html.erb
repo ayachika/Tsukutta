@@ -1,0 +1,49 @@
+<div class="d-flex align-items-center">
+    <h1>投稿一覧</h1>
+    <div class="ml-auto posts_button">
+        <%= form_tag posts_path, method: :get, class: 'posts__searchForm' do %>
+            <%= select_tag :tag_id,
+                           options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+                           {
+                             prompt: 'タグで絞り込み',
+                             class: 'form-control posts__select',
+                             onchange: 'submit(this.form);'
+                             }
+             %>
+     <% end %>
+        <%= link_to '投稿', new_post_path, class: "btn btn-outline-info" %> 
+    </div>
+</div>
+
+<% if flash[:notice] %>
+    <div class="alert alert-primary"><%= flash[:notice] %></div>
+<% end %>
+
+<table class="table table-bordered border-primary table-hover table-sm posts_table">
+  <thead class="bg-info text-light">
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">投稿タイトル</th>
+      <th scope="col">投稿画像</th>
+      <th scope="col">投稿者</th>
+      <th scope="col">投稿日</th>
+      <th scope="col">更新日時</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+            <th><%= post.id %></th>
+            <td><%= post.title %></td>
+            <td><%= image_tag post.picture.to_s %></td>
+            <td><%=  link_to post.user.name, post.user %></td>
+            <td><%= post.created_at.to_s(:datetime_base) %></td>
+            <td><%= post.updated_at.to_s(:datetime_base) %></td>
+            <td><%= link_to "詳細" , post, class: 'btn btn-outline-info' %></td>
+            <td><%= link_to "削除" , post, class: 'btn btn-outline-info', method: :delete, data: {confirm: "投稿記事を削除しますか？", cancel: "キャンセル", commit: "削除する", title: "削除の確認"} %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>

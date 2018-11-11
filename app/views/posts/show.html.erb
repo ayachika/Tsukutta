@@ -1,0 +1,31 @@
+<div class="d-flex align-items-center mt-4 mb-4">
+    <div class="ml-auto posts_button">
+        <!-- 修正 -->
+  　    <%= link_to '投稿一覧', posts_path, class: "btn btn-outline-info" %>
+      <%= link_to '編集', edit_post_path(@post), class: "btn btn-outline-info" %>
+    </div>
+</div>
+
+<!-- 追加 -->
+<% if flash[:notice] %>
+    <div class="alert alert-primary"><%= flash[:notice] %></div>
+<% end %>
+
+<%= render @post %>
+
+<!-- 追加 -->
+<div class="p-comment_list">
+  <div class="p-comment_listTitle">コメント</div>
+  <%= render @post.comments %>
+</div>
+
+<!-- 画像アップロード機能-->
+<p>
+  <strong>写真:</strong>
+  <%= image_tag(@post.picture_url) if @post.picture.present? %>
+</p>
+
+
+<!-- 0907コメント機能追加の際修正-->
+<%= render partial: 'comments/form', locals: { comment: @comment } %>
+

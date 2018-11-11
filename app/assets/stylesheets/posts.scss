@@ -1,0 +1,22 @@
+.posts_button {
+    a {
+        margin: 0 8px;
+    }
+}
+
+.posts_table {
+    tr:hover {
+        cursor: pointer;
+    }
+}
+
+// 追加
+.posts__searchForm {
+  display: inline-block;
+}
+
+// 追加
+.posts__select {
+  display: inline-block;
+  width: auto;
+}
