@@ -10,7 +10,7 @@
     }
 }
 
-// 追加
+// indexページのscss
 .posts__searchForm {
   display: inline-block;
 }
@@ -20,3 +20,15 @@
   display: inline-block;
   width: auto;
 }
+
+// 投稿ボタンを目立たせるため、追加
+
+.btn-outline-info{
+    font-size: 15px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    background-color:#ccf2ff;
+    color: #000000;
+}
+
