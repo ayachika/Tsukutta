@@ -1,0 +1,8 @@
+<% @user.posts.each do |post| %>
+        
+            <div class="title"><%= post.title %></div>
+            <div class="picture"><%= image_tag post.picture.to_s %></div>
+            <div class="time"><%= post.created_at.to_s(:datetime_base) %></div>
+            <div class="postdetail"><%= link_to "詳細" , post,class: 'btn btn-outline-info' %></div>
+            <div class="delatebtn"><%= link_to "削除" , post, class: 'btn btn-outline-info', method: :delete, data: {confirm: "投稿記事を削除しますか？", cancel: "キャンセル", commit: "削除する", title: "削除の確認"} %></div>
+<% end %>   
