@@ -17,8 +17,8 @@
 
 class User < ApplicationRecord
     attr_accessor :remember_token
-    has_many :favorites, through: :favorites, source: :post, dependent: :destroy
-    has_many :posts, through: :favorites, dependent: :destroy ,foreign_key: 'user'
+    
+    has_many :posts, dependent: :destroy ,foreign_key: 'user'
     
     before_save { email.downcase! }
     validates :name,  presence: true, length: { maximum: 50 }
@@ -27,8 +27,9 @@ class User < ApplicationRecord
                             format: { with: VALID_EMAIL_REGEX },
                             uniqueness: { case_sensitive: false }
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
-
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+    
+    
     # 渡された文字列のハッシュ値を返す
   def self.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -58,6 +59,7 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
+  
   
   
 end
