@@ -1,8 +1,5 @@
 
 
-
-
-
 .btn {
      float:left;
      margin-right:10px;
@@ -27,10 +24,7 @@
   display: inline-block;
 }
 
-.recipe_list_wrapper{
-  text-align: center;
-  
-}
+
 
 
 // 追加
@@ -49,4 +43,15 @@
     background-color:#ccf2ff;
     color: #000000;
 }
+
+//投稿のリスト表示方法
+
+.recipe_list{
+  text-align: center;
+  
+}
+
+
+
+
 

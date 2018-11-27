@@ -45,6 +45,14 @@ body {
   }
 
 
+.navbar-footer{
+  text-align: center;
+  bottom: 0;
+  margin-bottom: 0;
+  height: 60px;
+  background-color: #ffffcc;
+  padding-top: 20px;
+}
 
 
 /* Add a black background color to the top navigation */
@@ -78,43 +86,7 @@ body {
     color: black;
 }
 
-/* home */
 
-.static_pages{
-
-background-image: url("photo1.png.jpg"); 
-
-}
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
 
 /* sidebar */
 
@@ -144,14 +116,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
 
 /* forms */
 
@@ -203,15 +167,23 @@ img {
 }
 
 
-/*show.html.erbのcsssを追加*/
+/*users/show.html.erbのcsssを追加*うまく反映されない/
 .new-message{
   text-align:center;
   
 }
 
-.recipe_list_wrapper{
-  text-align:center;
+
+.col-md-8{
+  padding-bottom: 100px;
   
 }
 
+
+.mypage_container{
+  height: auto !important;
+  
+  
+  
+}
   

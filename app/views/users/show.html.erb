@@ -1,4 +1,7 @@
+<%= stylesheet_link_tag "base" , :media => "all" %>
+
 <div class="col-md-8">
+    <div class="mypage_container">
     <% if @user.posts.any? %>
         <% @user.posts.each do |post| %>
             <div class="title"><%= post.title %></div>
@@ -13,5 +16,8 @@
         <p>作ったごはんについて投稿しましょう！</p>
       </div>
     <% end %>
+    </div>
 </div>
+
+
         
