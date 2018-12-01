@@ -8,6 +8,6 @@ config.fog_credentials = {
  region: ENV['S3_REGION']
  }
 config.fog_directory = ENV['S3_BUCKET']
- config.asset_host = 'https://s3.ap-northeast-1.amazonaws.com/tsukutta'
+ config.asset_host = 'https://s3.ap-southeast-1.amazonaws.com/tsukutta'
 end
 end
