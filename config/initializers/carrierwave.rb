@@ -7,7 +7,7 @@ config.fog_credentials = {
  aws_secret_access_key: ENV['NaPAojit6nVclDpq/APq9zRqqlp4YtlnyiFmhq40'],
  region: 'ap-northeast-1'
  }
-config.fog_directory = 'tsukutta'
+config.fog_directory = ENV['tsukutta']
  config.asset_host = 'https://s3.ap-northeast-1.amazonaws.com/tsukutta'
 end
 end
