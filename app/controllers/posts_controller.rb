@@ -25,8 +25,6 @@ class PostsController < ApplicationController
         
         # 保存の正否をチェック
    if @post.save
-      # フラッシュ
-      flash[:notice] = "「#{@post.title}」の記事が投稿されました!"
       redirect_to @post
     else
     redirect_to new_post_path, flash: {

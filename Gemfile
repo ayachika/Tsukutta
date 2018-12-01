@@ -62,6 +62,9 @@ gem 'rails-i18n'
 gem 'annotate'
 gem 'rake', '< 11.0'
 gem 'carrierwave'
+gem 'fog-aws'
+
+
 gem 'bcrypt',         '3.1.12'
 gem 'font-awesome-rails'
 gem 'rubyzip'

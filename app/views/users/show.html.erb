@@ -1,14 +1,31 @@
-<%= stylesheet_link_tag "base" , :media => "all" %>
+<%= stylesheet_link_tag "index" , :media => "all" %>
 
-<div class="col-md-8">
-    <div class="mypage_container">
+
+<%= link_to '投稿', new_post_path, class: "btn btn-outline-info" %>
+<br></br>
+<div class="recipe_content_wrapper">
+
+
+
+
+    <div class="recipe_list_wrapper">
     <% if @user.posts.any? %>
         <% @user.posts.each do |post| %>
-            <div class="title"><%= post.title %></div>
-            <div class="picture"><%= image_tag post.picture.to_s %></div>
-            <div class="time"><%= post.created_at.to_s(:datetime_base) %></div>
-            <div class="postdetail"><%= link_to "詳細" , post,class: 'btn btn-outline-info' %></div>
-            <div class="delatebtn"><%= link_to "削除" , post, class: 'btn btn-outline-info', method: :delete, data: {confirm: "投稿記事を削除しますか？", cancel: "キャンセル", commit: "削除する", title: "削除の確認"} %></div>
+            <div class="recipe_list">
+                    <div class="content-left">
+                    <div class="post.picture"><%= image_tag post.picture.to_s  %></div>
+                </div>
+                <div class="content-center">
+                    <p class="post.title"><%= post.title %></p>
+                </div>
+                <div class="btn btn-outline-info"><%= link_to "コメントする" , post  %></div>
+                <div class="btn btn-outline-info"><%= link_to "削除" , post , method: :delete, data: {confirm: "投稿記事を削除しますか？", cancel: "キャンセル", commit: "削除する", title: "削除の確認"} %></div>
+                    
+                <div class="content-right">
+                    <p class="post.user"><%=  link_to post.user.name, post.user %></p>
+                    <p class="post.time"><%= post.created_at.to_s(:datetime_base) %></p>
+                </div>
+                </div>
     <% end %>
     <% else %>
       <div class="new-message">

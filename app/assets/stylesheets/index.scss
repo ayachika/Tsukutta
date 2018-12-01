@@ -1,6 +1,42 @@
 
+.recipe_content_wrapper{
+  margin: auto; 
+  width: 100%;
+  padding: 20px;
+}
 
-.recipe_list_wrapper{
-  text-align: center;
+
+
+.recipe_list{
+  border-bottom: solid 1px rgb(240, 240, 240);
+  float: left;
+  margin-right: 20px;
   
+}
+
+.post.picture{
+
+}
+
+.clear{
+  float: clear;
+}
+
+
+.content-left{
+  width: 300px;
+  margin: 10px 20px;
+  padding: 20px;
+  float: left;
+  }
+  
+.content-center{
+  
+}
+
+
+
+.content-right p{
+  float: left;
+
 }
