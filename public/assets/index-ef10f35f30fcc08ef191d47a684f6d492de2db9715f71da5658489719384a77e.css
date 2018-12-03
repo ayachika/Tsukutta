@@ -1,0 +1,27 @@
+/* line 2, /home/ec2-user/environment/app/assets/stylesheets/index.scss */
+.recipe_content_wrapper {
+  margin: auto;
+  width: 100%;
+  padding: 20px;
+}
+
+/* line 10, /home/ec2-user/environment/app/assets/stylesheets/index.scss */
+.recipe_list {
+  border-bottom: solid 1px #f0f0f0;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 19, /home/ec2-user/environment/app/assets/stylesheets/index.scss */
+.content-left {
+  width: 300px;
+  margin: 10px 20px;
+  padding: 20px;
+  height: 220px;
+  float: left;
+}
+
+/* line 35, /home/ec2-user/environment/app/assets/stylesheets/index.scss */
+.content-right p {
+  float: left;
+}
