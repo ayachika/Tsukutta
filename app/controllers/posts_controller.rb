@@ -76,11 +76,7 @@ class PostsController < ApplicationController
     
     #paramsから欲しいデータのみ抽出
     def post_params
-        #params.require(:post).permit(:name, :title, :content)
-        # tag_ids をリストで追加 #tagがうまくいかない
-        params.require(:post).permit(:title, :content, :picture, tag_ids:[])
-        
-        
+        params.require(:post).permit(:title, :content, :picture, tag_ids: [])
     end
     
     def set_target_post

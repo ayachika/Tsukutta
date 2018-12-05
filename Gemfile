@@ -67,7 +67,7 @@ gem 'fog-aws'
 
 
 gem 'bcrypt',         '3.1.12'
-gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 5.4.1'
 gem 'rubyzip'
 gem 'omniauth'
 gem 'omniauth-twitter'

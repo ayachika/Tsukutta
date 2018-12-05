@@ -15,15 +15,12 @@
 
 <!-- 追加 -->
 <div class="p-comment_list">
-  <div class="p-comment_listTitle">コメント</div>
   <%= render @post.comments %>
 </div>
 
 <!-- 画像アップロード機能-->
-<p>
-  <strong>写真:</strong>
   <%= image_tag(@post.picture_url) if @post.picture.present? %>
-</p>
+
 
 
 <!-- 0907コメント機能追加の際修正-->

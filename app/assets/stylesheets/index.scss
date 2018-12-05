@@ -1,17 +1,25 @@
 
+
 .recipe_content_wrapper{
   margin: auto; 
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 
 
 .recipe_list{
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   border-bottom: solid 1px rgb(240, 240, 240);
   float: left;
-  margin-right: 20px;
-  
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 40px;
+  transition:all 0.4s;
+  border-radius: 10px 10px 10px 10px;
+  &:hover {
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
   
 }
 
@@ -26,13 +34,13 @@
   }
   
 
-.content-center {
-  
-}
-
 
 
 .content-right p{
-  float: left;
+ float: left; 
+ margin-left: 10px;
+ padding-right: 10px;
 
 }
+
+
