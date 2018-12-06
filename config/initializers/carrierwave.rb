@@ -12,6 +12,5 @@ CarrierWave.configure do |config|
  region: ENV['S3_REGION']
  }
  config.fog_directory = 'tsukutta'
- config.asset_host = 'https://s3.ap-noutheast-1.amazonaws.com/tsukutta'
 end
 end
