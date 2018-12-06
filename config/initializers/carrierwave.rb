@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
  aws_secret_access_key: ENV['SECRET_ACCESS_KEY'],
  region: ENV['S3_REGION']
  }
- config.fog_directory = ENV['S3_BUCKET']
+ config.fog_directory = 'tsukutta'
  config.asset_host = 'https://s3.ap-noutheast-1.amazonaws.com/tsukutta'
 end
 end
