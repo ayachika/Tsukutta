@@ -1,4 +1,4 @@
-
+if Rails.env == 'production'
 CarrierWave.configure do |config|
   config.fog_credentials = {
     provider: 'AWS',
@@ -7,8 +7,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
   
-  case Rails.env
-  when 'production'
         
   config.fog_directory  = 'tsukuttapic'
   config.cache_storage = :fog
