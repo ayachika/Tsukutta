@@ -17,7 +17,7 @@
 
 class User < ApplicationRecord
     attr_accessor :remember_token
-    
+    mount_uploader :picture, PictureUploader
     has_many :posts, dependent: :destroy ,foreign_key: 'user'
     
     before_save { email.downcase! }
