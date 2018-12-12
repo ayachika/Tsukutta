@@ -4,10 +4,7 @@ class PictureUploader < CarrierWave::Uploader::Base
    #include Piet::CarrierWaveExtension
   include CarrierWave::MiniMagick
   process resize_to_limit: [200, 200]
-
-
-
-  # Choose what kind of storage to use for this uploader:
+# Choose what kind of storage to use for this uploader:
   if Rails.env == 'production'
     storage :fog
   else
@@ -51,4 +48,5 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
 end
