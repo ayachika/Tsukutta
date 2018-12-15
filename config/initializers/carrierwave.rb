@@ -17,7 +17,7 @@ CarrierWave.configure do |config|
   
   config.fog_directory  = ENV['S3_BUCKET']
   config.cache_storage = :fog    
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tsukuttapic'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tsukutta'
   end
 else
     CarrierWave.configure do |config|
