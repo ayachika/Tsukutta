@@ -64,7 +64,6 @@ gem 'rake', '< 11.0'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
-gem 'dotenv-rails'
 
 gem 'bcrypt',         '3.1.12'
 gem 'font-awesome-sass', '~> 5.4.1'
