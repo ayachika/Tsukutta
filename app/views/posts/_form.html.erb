@@ -24,16 +24,17 @@
     
     
     <div class="form-group">
-    <span>タグ</span>
-    <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
-      <div class="form-check">
+        <span>タグ</span>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+              <div class="form-check">
         <%= tag.label class: 'form-check-label' do %>
           <%= tag.check_box class: 'form-check-input' %>
           <%= tag.text %>
         <% end %>
-      </div>
-    <% end %>
-  </div>
+          </div>
+        <% end %>
+        </div>
+      
     
     
     <div class="field">
@@ -42,8 +43,4 @@
       </div>
     <br></br>
     <%= f.submit '投稿', class: 'btn btn-info btn-block' %>
-    <small id="submit-tip" class="form-text text-muted">
-        投稿する前に投稿内容を見直してください!
-    </small>
-    <%= f.hidden_field :user_id, value: current_user.id %>
 <% end %>

@@ -9,6 +9,6 @@
 #
 
 class Tag < ApplicationRecord
-    has_many :post_tag_relations, dependent: :delete_all
+    has_many :post_tag_relations, dependent: :delete_all, foreign_key: 'tag_id'
     has_many :posts, through: :post_tag_relations
 end

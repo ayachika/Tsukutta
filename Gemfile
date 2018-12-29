@@ -71,3 +71,6 @@ gem 'rubyzip'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'devise'
+
+gem 'acts-as-taggable-on'
+gem 'jquery-ui-rails'

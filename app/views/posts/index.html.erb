@@ -26,9 +26,9 @@
                 </div>
                 <div class="content-center">
                 <p class="post_title"><%= link_to post.title, post %></p>
-                    <% post.tags.each do |tag| %>
-                        <span class="badge badge-light"><%= tag.name %></span>
-                    <% end %>
+                <% post.tags.each do |tag| %>
+                <span class="badge badge-light"><%= tag.name %></span>
+                  <% end %>
                 </div>
                 
                 <div class="btn btn-outline-info"><%= link_to "コメントする" , post  %></div>
